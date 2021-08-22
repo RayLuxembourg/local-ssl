@@ -12,6 +12,10 @@ cd local-ssl
 ### Step 2
 Generate your private key
 ```shell
+mkdir ssl
+```
+
+```shell
 openssl genrsa -des3 -out ssl/localhost.key 2048
 ```
 And then generate the root certificate
