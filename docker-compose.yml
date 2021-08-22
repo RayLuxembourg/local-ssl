@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: unless-stopped
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./ssl:/etc/localhost-ssl
+    ports:
+      - "80:80"
+      - "443:443"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
