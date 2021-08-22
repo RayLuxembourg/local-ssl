@@ -1,4 +1,5 @@
 # Local-SSL
+Before you start, make sure to configure conf/app.conf to serve the proper endpoints and port or static content.
 
 ### Step 1
 
